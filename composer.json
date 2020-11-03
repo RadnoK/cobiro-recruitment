@@ -65,9 +65,6 @@
         "composer:install:prod": [
             "APP_ENV=prod composer install --no-interaction --optimize-autoloader --no-dev"
         ],
-        "cs:fix": [
-            "php-cs-fixer fix"
-        ],
         "analyse": [
             "phpstan analyse src tests bin",
             "php-cs-fixer fix -v --dry-run --using-cache=no"

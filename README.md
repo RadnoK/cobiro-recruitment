@@ -12,20 +12,20 @@ This is a solution for a task described in the [PHP Task Attachment.pdf](PHP%20T
 
 ## Installation
 
-```bash
+```shell script
 $ cp .env .env.local
 $ docker-composer up --build --detach
 ```
 
 After the container is build run this to access it:
 
-```bash
+```shell script
 $ docker exec --interactive --tty cobiro-recruitment_php-fpm_1 sh
 ```
 
 Once you are in the PHP container you can install dependencies as following:
 
-```bash
+```shell script
 $ composer install
 $ bin/console doctrine:migrations:migrate
 ``` 
@@ -71,6 +71,14 @@ You can also try a **Postman** collection which is available in the [docs](docs)
 
 Once you are in the PHP container, you can create a product using the following command:
 
-```bash
+```shell script
 $ bin/console cobiro:product:create [name] [priceAmount] [priceCurrency]
+```
+
+### Development
+
+Running code analysis
+
+```shell script
+$ composer analyse
 ```
